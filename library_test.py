@@ -34,6 +34,11 @@ class TestCase(unittest.TestCase):
     def test_no_integers(self):
         self.assert_extract("no integers", library.integers)
 
+    def test_no_dates1(self):
+        self.assert_extract("2019-12-32.", library.dates_iso8601)
+
+    def test_no_dates2(self):
+        self.assert_extract("2019-13-31.", library.dates_iso8601)
 
 if __name__ == '__main__':
     unittest.main()
