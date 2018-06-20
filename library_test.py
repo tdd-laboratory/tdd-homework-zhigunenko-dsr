@@ -40,8 +40,42 @@ class TestCase(unittest.TestCase):
     def test_no_dates2(self):
         self.assert_extract("2019-13-31", library.dates_iso8601)
 
-    def test_human_readable_date(self):
-        self.assert_extract("25 Jan 2017", library.dates_iso8601)
+    def test_human_readable_date01(self):
+        self.assert_extract('I was born on 25 Jan 2017.', library.dates_format, '25 Jan 2017')
+
+    def test_human_readable_date02(self):
+        self.assert_extract('I was born on 25 Feb 2017.', library.dates_format, '25 Feb 2017')
+
+    def test_human_readable_date03(self):
+        self.assert_extract('I was born on 25 Mar 2017.', library.dates_format, '25 Mar 2017')
+
+    def test_human_readable_date04(self):
+        self.assert_extract('I was born on 25 Apr 2017.', library.dates_format, '25 Apr 2017')
+
+    def test_human_readable_date05(self):
+        self.assert_extract('I was born on 25 May 2017.', library.dates_format, '25 May 2017')
+
+    def test_human_readable_date06(self):
+        self.assert_extract('I was born on 25 Jun 2017.', library.dates_format, '25 Jun 2017')
+
+    def test_human_readable_date07(self):
+        self.assert_extract('I was born on 25 Jul 2017.', library.dates_format, '25 Jul 2017')
+
+    def test_human_readable_date08(self):
+        self.assert_extract('I was born on 25 Aug 2017.', library.dates_format, '25 Aug 2017')
+
+    def test_human_readable_date09(self):
+        self.assert_extract('I was born on 25 Sep 2017.', library.dates_format, '25 Sep 2017')
+
+    def test_human_readable_date10(self):
+        self.assert_extract('I was born on 25 Oct 2017.', library.dates_format, '25 Oct 2017')
+
+    def test_human_readable_date11(self):
+        self.assert_extract('I was born on 25 Nov 2017.', library.dates_format, '25 Nov 2017')
+
+    def test_human_readable_date12(self):
+        self.assert_extract('I was born on 25 Dec 2017.', library.dates_format, '25 Dec 2017')
+
 
 if __name__ == '__main__':
     unittest.main()
